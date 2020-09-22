@@ -251,12 +251,12 @@ const getDateThreshold = (lineItems) => {
 const mergeRecord = (newRecord, oldRecord) => {
     let modified = false;
 
-    let dateTheshold = getDateThreshold(oldRecord.lineItems);
+    let dateThreshold = getDateThreshold(oldRecord.lineItems);
     //console.log(dateTheshold)
 
     newRecord.lineItems.forEach(newElement => {
 
-        if (new Date(newElement.startBillingInterval) > dateTheshold) {
+        if (new Date(newElement.startBillingInterval) > dateThreshold) {
             //console.log("adding record");
             //console.log(util.inspect(newElement, { depth: 10 }));
             oldRecord.lineItems.push(newElement);
