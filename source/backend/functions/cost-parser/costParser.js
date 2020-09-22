@@ -252,7 +252,7 @@ const mergeRecord = (newRecord, oldRecord) => {
     let modified = false;
 
     let dateThreshold = getDateThreshold(oldRecord.lineItems);
-    //console.log(dateTheshold)
+    //console.log(dateThreshold)
 
     newRecord.lineItems.forEach(newElement => {
 
